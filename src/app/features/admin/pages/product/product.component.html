@@ -1,0 +1,22 @@
+<p-table [value]="products">
+  <ng-template pTemplate="header">
+      <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Category Name</th>
+          <th>Quantity</th>
+          <th>Unit Price</th>
+          <th>Units In Stock</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-product>
+      <tr>
+          <td>{{product.productId}}</td>
+          <td>{{product.productName}}</td>
+          <td>{{product.categoryName}}</td>
+          <td>{{product.quantityPerUnit}}</td>
+          <td>{{product.unitPrice}}</td>
+          <td>{{product.unitsInStock}}</td>
+      </tr>
+  </ng-template>
+</p-table>
