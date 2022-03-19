@@ -13,13 +13,15 @@ import {TabMenuModule} from 'primeng/tabmenu';
 import {TableModule} from 'primeng/table';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import {ListboxModule} from 'primeng/listbox';
+import { ProductDetailComponent } from './features/admin/pages/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     NaviComponent,
-    CategoryComponent
+    CategoryComponent,
+    ProductDetailComponent
 
   ],
   imports: [
