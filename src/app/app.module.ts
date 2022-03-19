@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from "@angular/common/http"
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,8 @@ import { CategoryComponent } from './features/admin/pages/category/category.comp
 
 import {TabMenuModule} from 'primeng/tabmenu';
 import {TableModule} from 'primeng/table';
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
+import {ListboxModule} from 'primeng/listbox';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import {TableModule} from 'primeng/table';
     AppRoutingModule,
     TabMenuModule,
     TableModule,
-    HttpClientModule
+    HttpClientModule,
+    ProgressSpinnerModule,
+    ListboxModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

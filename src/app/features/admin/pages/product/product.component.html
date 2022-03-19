@@ -1,3 +1,7 @@
+<div *ngIf="isLoading">
+ <p-progressSpinner></p-progressSpinner>
+</div>
+
 <p-table [value]="products">
   <ng-template pTemplate="header">
       <tr>
