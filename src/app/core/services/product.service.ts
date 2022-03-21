@@ -8,7 +8,7 @@ import ProductDetailModel from '../models/productDetailModel';
 })
 export class ProductService {
   apiUrl:string ="http://localhost:5026/api/Products/";
-
+  //http://localhost:5026/api/Products/getallbycategory/2
   constructor(private httpClient : HttpClient) { }
 
   getAll():Observable<any>{
@@ -17,5 +17,9 @@ export class ProductService {
 
   getById(id:number):Observable<ProductDetailModel>{
     return this.httpClient.get<ProductDetailModel>(this.apiUrl+"getbyid/"+id);
+  }
+
+  getByCategory(categoryid:number){
+    return this.httpClient.get<ProductDetailModel>(this.apiUrl+"getallbycategory/"+categoryid);
   }
 }

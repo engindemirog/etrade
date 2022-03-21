@@ -1,1 +1,4 @@
-<p-listbox [options]="categories" [(ngModel)]="selectedCategory" optionLabel="categoryName"></p-listbox>
+
+  <p-listbox [options]="categories" (click)="selectCategory()" [(ngModel)]="selectedCategory" optionLabel="categoryName"></p-listbox>
+
+

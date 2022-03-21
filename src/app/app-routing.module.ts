@@ -6,6 +6,7 @@ import { ProductComponent } from './features/admin/pages/product/product.compone
 const routes: Routes = [
   {path:"", pathMatch:"full", component:ProductComponent},
   {path:"products", component:ProductComponent},
+  {path:"products/category/:categoryid", component:ProductComponent},
   {path:"productdetail/:id", component:ProductDetailComponent}
 ];
 
