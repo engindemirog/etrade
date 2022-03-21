@@ -16,7 +16,7 @@
   <ng-template pTemplate="body" let-product>
       <tr>
           <td>{{product.productId}}</td>
-          <td>{{product.productName}}</td>
+          <td routerLink="/productdetail/{{product.productId}}">{{product.productName}}</td>
           <td>{{product.categoryName}}</td>
           <td>{{product.quantityPerUnit}}</td>
           <td>{{product.unitPrice}}</td>

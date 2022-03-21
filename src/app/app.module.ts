@@ -13,6 +13,7 @@ import {TabMenuModule} from 'primeng/tabmenu';
 import {TableModule} from 'primeng/table';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import {ListboxModule} from 'primeng/listbox';
+import {CardModule} from 'primeng/card';
 import { ProductDetailComponent } from './features/admin/pages/product-detail/product-detail.component';
 
 @NgModule({
@@ -32,7 +33,8 @@ import { ProductDetailComponent } from './features/admin/pages/product-detail/pr
     HttpClientModule,
     ProgressSpinnerModule,
     ListboxModule,
-    FormsModule
+    FormsModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

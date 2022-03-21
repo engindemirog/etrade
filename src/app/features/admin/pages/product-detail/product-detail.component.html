@@ -1,1 +1,17 @@
-<p>product-detail works!</p>
+<div *ngIf="product; else productNotFound">
+  <p-card>
+  <ng-template pTemplate="header">
+      {{product.productName}}
+  </ng-template>
+      {{product.categoryName}}
+  <ng-template pTemplate="footer">
+      {{product.unitPrice}}
+  </ng-template>
+</p-card>
+</div>
+<ng-template #productNotFound>
+ <h3>Ürün bulunamadı</h3>
+</ng-template>
+
+
+
