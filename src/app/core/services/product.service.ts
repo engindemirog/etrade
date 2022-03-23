@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import ProductAddModel from '../models/productAddModel';
 import ProductDetailModel from '../models/productDetailModel';
 
 @Injectable({
@@ -21,5 +22,9 @@ export class ProductService {
 
   getByCategory(categoryid:number){
     return this.httpClient.get<ProductDetailModel>(this.apiUrl+"getallbycategory/"+categoryid);
+  }
+
+  add(product:ProductAddModel){
+    return this.httpClient.post(this.apiUrl+"add",product)
   }
 }
