@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from "@angular/common/http"
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import {BrowserAnimationsModule}  from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,9 @@ import {TableModule} from 'primeng/table';
 import {ProgressSpinnerModule} from 'primeng/progressspinner';
 import {ListboxModule} from 'primeng/listbox';
 import {CardModule} from 'primeng/card';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {ToastModule} from 'primeng/toast';
+
 import { ProductDetailComponent } from './features/admin/pages/product-detail/product-detail.component';
 import { ProductAddComponent } from './features/admin/pages/product-add/product-add.component';
 
@@ -37,7 +41,10 @@ import { ProductAddComponent } from './features/admin/pages/product-add/product-
     ListboxModule,
     FormsModule,
     CardModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ConfirmDialogModule,
+    BrowserAnimationsModule,
+    ToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]
