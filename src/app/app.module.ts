@@ -20,6 +20,7 @@ import {ToastModule} from 'primeng/toast';
 
 import { ProductDetailComponent } from './features/admin/pages/product-detail/product-detail.component';
 import { ProductAddComponent } from './features/admin/pages/product-add/product-add.component';
+import { LoginComponent } from './features/admin/pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ProductAddComponent } from './features/admin/pages/product-add/product-
     NaviComponent,
     CategoryComponent,
     ProductDetailComponent,
-    ProductAddComponent
+    ProductAddComponent,
+    LoginComponent
 
   ],
   imports: [
