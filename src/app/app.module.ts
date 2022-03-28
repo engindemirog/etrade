@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from "@angular/common/http"
+import {HttpClientModule, HTTP_INTERCEPTORS} from "@angular/common/http"
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import {BrowserAnimationsModule}  from '@angular/platform-browser/animations';
 
@@ -21,6 +21,7 @@ import {ToastModule} from 'primeng/toast';
 import { ProductDetailComponent } from './features/admin/pages/product-detail/product-detail.component';
 import { ProductAddComponent } from './features/admin/pages/product-add/product-add.component';
 import { LoginComponent } from './features/admin/pages/login/login.component';
+import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,9 @@ import { LoginComponent } from './features/admin/pages/login/login.component';
     BrowserAnimationsModule,
     ToastModule
   ],
-  providers: [],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor, multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

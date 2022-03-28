@@ -11,9 +11,9 @@ export class LoginComponent implements OnInit {
   constructor(private authService:AuthService) { }
 
   ngOnInit(): void {
-    this.authService.login({email:"engin@engin.com",password:"123456"})
+    this.authService.login({email:"engin@engin.com",password:"12345"})
     .subscribe(data=>{
-      console.log(data.token);
+      localStorage.setItem("token",data.token)
     },responseError=>{
       console.log(responseError.error)
     })
