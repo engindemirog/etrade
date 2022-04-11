@@ -11,6 +11,7 @@
           <th>Quantity</th>
           <th>Unit Price</th>
           <th>Units In Stock</th>
+          <th></th>
       </tr>
   </ng-template>
   <ng-template pTemplate="body" let-product>
@@ -21,6 +22,7 @@
           <td>{{product.quantityPerUnit}}</td>
           <td>{{product.unitPrice}}</td>
           <td>{{product.unitsInStock}}</td>
+          <td><a (click)="addToCart(product)">Sepete ekle</a></td>
       </tr>
   </ng-template>
 </p-table>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Store } from '@ngrx/store';
 import { ProductService } from 'src/app/core/services/product.service';
+import { AddProduct, CartActionTypes } from 'src/app/core/store/cart-actions';
 
 @Component({
   selector: 'app-product',
@@ -12,7 +14,8 @@ export class ProductComponent implements OnInit {
   isLoading: boolean = true
 
   constructor(private productService: ProductService,
-    private activatedRoute: ActivatedRoute) { }
+    private activatedRoute: ActivatedRoute,
+    private store:Store) { }
 
   ngOnInit(): void {
 
@@ -33,6 +36,10 @@ export class ProductComponent implements OnInit {
     })
 
 
+  }
+
+  addToCart(product){
+    this.store.dispatch(new AddProduct(product))
   }
 
 }

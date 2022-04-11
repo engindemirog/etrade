@@ -1,0 +1,6 @@
+<ul>
+  <li
+  *ngFor="let product of cart">{{product.productName}}
+    <a (click)="removeFromCart(product)">Sepetten sil</a>
+  </li>
+</ul>

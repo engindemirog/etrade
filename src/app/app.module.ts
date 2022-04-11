@@ -22,6 +22,9 @@ import { ProductDetailComponent } from './features/admin/pages/product-detail/pr
 import { ProductAddComponent } from './features/admin/pages/product-add/product-add.component';
 import { LoginComponent } from './features/admin/pages/login/login.component';
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
+import { StoreModule } from '@ngrx/store';
+import { cartReducer } from './core/store/cart-reducer';
+import { CartSummaryComponent } from './features/admin/pages/cart-summary/cart-summary.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,8 @@ import { AuthInterceptor } from './core/interceptors/auth.interceptor';
     CategoryComponent,
     ProductDetailComponent,
     ProductAddComponent,
-    LoginComponent
+    LoginComponent,
+    CartSummaryComponent
 
   ],
   imports: [
@@ -47,7 +51,8 @@ import { AuthInterceptor } from './core/interceptors/auth.interceptor';
     ReactiveFormsModule,
     ConfirmDialogModule,
     BrowserAnimationsModule,
-    ToastModule
+    ToastModule,
+    StoreModule.forRoot({cartReducer:cartReducer})
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS,useClass:AuthInterceptor, multi:true}
